@@ -9,9 +9,7 @@ import Navbar from "./Navbar";
 const AuthModal = ({ login }) => {
   return (
     <div
-      className={`flex h-screen w-full flex-col from-[#ff8f70] to-[#ff3d54] pt-12 sm:!bg-gradient-to-b ${
-        login ? "bg-gradient-to-r" : "bg-gradient-to-l"
-      }`}
+      className={`flex h-screen w-full flex-col bg-gradient-to-r from-[#ff8f70] to-[#ff3d54] pt-12 sm:bg-gradient-to-b `}
     >
       <Container>
         {/* <Logo /> */}

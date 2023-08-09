@@ -49,7 +49,7 @@ export default MobileNav;
 const Backdrop = ({ onCloseModal }) => {
   return (
     <div
-      className="fixed left-0 top-0 hidden h-full w-full bg-[rgba(255,61,84,0.5)] backdrop-blur-sm lg:block"
+      className="fixed left-0 top-0 hidden h-full w-full bg-[rgba(255,61,84,0.75)] backdrop-blur-sm lg:block"
       // onClick={onCloseModal}
     >
       &nbsp;
