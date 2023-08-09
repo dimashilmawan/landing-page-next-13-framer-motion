@@ -74,8 +74,12 @@ const Modal = ({ onCloseModal, onToggleDropdown, dropdown }) => {
       </button>
       <Labels dropdown={dropdown} onToggleDropdown={onToggleDropdown} />
       <div className="flex flex-col items-center justify-center gap-4 pt-8">
-        <Link href="/login">Login</Link>
-        <ButtonLinkMobile href="/signup">Sign up</ButtonLinkMobile>
+        <Link onClick={onCloseModal} href="/login">
+          Login
+        </Link>
+        <ButtonLinkMobile onClick={onCloseModal} href="/signup">
+          Sign up
+        </ButtonLinkMobile>
       </div>
     </ContainerModal>
   );

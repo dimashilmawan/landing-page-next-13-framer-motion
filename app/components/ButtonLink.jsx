@@ -16,10 +16,11 @@ const ButtonLink = ({ children, href, outlined = false, className }) => {
 };
 export default ButtonLink;
 
-export const ButtonLinkMobile = ({ children, href, className }) => {
+export const ButtonLinkMobile = ({ children, href, className, onClick }) => {
   return (
     <Link
       href={href}
+      onClick={onClick}
       className={`inline-block w-40 rounded-full bg-gradient-to-r from-[#ff8f70] to-[#ff3d54] py-3 text-center text-xl font-bold text-white transition-all sm:text-lg xs:text-base ${className}`}
     >
       {children}

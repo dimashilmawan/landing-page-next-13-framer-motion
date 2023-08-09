@@ -6,7 +6,7 @@ import illustrationPhones from "@/images/illustration-phones.svg";
 const Phones = () => {
   return (
     <div className="relative rounded-bl-[96px] rounded-tr-[96px] bg-gradient-to-r from-[#2c2d3f] to-[#3f4164] py-28 xl:py-20 lg:py-16">
-      <div className="absolute left-0 top-0 h-full w-full overflow-hidden rounded-tr-[96px]">
+      <div className="absolute left-0 top-0 h-full w-full overflow-hidden rounded-bl-[96px] rounded-tr-[96px]">
         <Image
           alt="bg pattern circles"
           src={bgPatternCircles}

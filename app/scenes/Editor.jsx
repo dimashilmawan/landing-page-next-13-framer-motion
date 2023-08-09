@@ -1,12 +1,12 @@
 import Container from "@/components/Container";
 import illustrationEditorDesk from "@/images/illustration-editor-desktop.svg";
-import illustrationEditorMobile from "@/images/illustration-editor-mobile-cropped.svg";
+import illustrationEditorMobile from "@/images/illustration-editor-mobile.svg";
 import Image from "next/image";
 
 const Editor = () => {
   return (
     <div className="overflow-hidden" id="illustration-desk">
-      <Container className="h-full pb-60 pt-32 lg:pb-52 lg:pt-28 md:py-28 md:pb-40  sm:pb-60 xs:py-20 xs:pb-40">
+      <Container className="h-full pb-60 pt-32 lg:pb-52 lg:pt-28 md:py-28  md:pb-40 sm:pb-60 xs:py-20 xs:pb-40">
         <h2 className="text-center text-[2.75rem] font-semibold text-[#1f3f5b] lg:text-3xl xs:text-2xl">
           Design for the future
         </h2>
