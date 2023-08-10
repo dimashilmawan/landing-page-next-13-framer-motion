@@ -1,18 +1,36 @@
 import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
 
-const tooltipsText = ["Contact", "NewsLetter", "LinkedIn"];
+const tooltipsTextObj = {
+  product: ["overview", "pricing", "marketing", "features", "integrations"],
+  company: ["about", "team", "blog", "carrers"],
+  connect: ["contact", "newsLetter", "linkedIn"],
+};
 
-const ToolTips = () => {
+const ToolTips = ({ label, isTooltipsActive }) => {
   return (
-    <div className="absolute left-1/2 top-14 hidden w-36 -translate-x-1/2 rounded-md bg-white/95 font-normal text-gray-600/90 shadow-xl backdrop-blur-sm group-hover:block">
-      <ul className="flex flex-col gap-[2px] py-4 text-center ">
-        {tooltipsText.map((text) => (
-          <li key={text} className="hover:text-gray-900 ">
-            <Link href={`/${text.toLowerCase()}`}>{text}</Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <AnimatePresence initial={false} mode="popLayout">
+      {isTooltipsActive && (
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0 }}
+          style={{ left: "50%", top: 60, translateX: "-50%" }}
+          className=" absolute w-36 rounded-md bg-white font-normal text-gray-700/90 shadow-2xl"
+        >
+          <ul className="flex flex-col gap-[2px] p-4 text-center ">
+            {tooltipsTextObj[label.toLowerCase()].map((text) => (
+              <li
+                key={text}
+                className="rounded-[3px] py-1 capitalize transition-all hover:bg-[#ff727e] hover:text-white"
+              >
+                <Link href="/">{text}</Link>
+              </li>
+            ))}
+          </ul>
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 };
 export default ToolTips;
