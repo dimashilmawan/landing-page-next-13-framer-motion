@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import Container, { ContainerModal } from "./Container";
-import Logo from "./Logo";
 import illustrationPhones from "@/images/illustration-phones-cropped.svg";
 import illustrationLaptopMobile from "@/images/illustration-laptop-mobile.svg";
 import Navbar from "./Navbar";
@@ -12,7 +11,6 @@ const AuthModal = ({ login }) => {
       className={`flex h-screen w-full flex-col bg-gradient-to-r from-[#ff8f70] to-[#ff3d54] pt-12 sm:bg-gradient-to-b `}
     >
       <Container>
-        {/* <Logo /> */}
         <Navbar />
       </Container>
       <div className="flex h-full items-center justify-center">
@@ -30,7 +28,7 @@ const AuthModal = ({ login }) => {
             </div>
             <div className={`order-2 flex flex-1 items-center justify-normal`}>
               <div className="w-full ">
-                <h1 className="text-center text-3xl font-semibold text-[rgba(31,63,91,0.95)]">
+                <h1 className="text-center text-3xl font-medium text-[rgba(31,63,91,0.95)]">
                   {login ? "Welcome!" : "Create account"}
                 </h1>
                 <form className="mt-8 font-ubuntu xs:mt-4">
@@ -77,7 +75,7 @@ const AuthModal = ({ login }) => {
                     </p>
                     <Link
                       href={`/${login ? "signup" : "login"}`}
-                      className="font-medium text-[#ff525d] outline-none ring-[#ff525d] ring-offset-2 focus:ring-2"
+                      className="font-medium text-[#ff525d] underline underline-offset-[3px] outline-none ring-[#ff525d] ring-offset-2 focus:ring-2"
                     >
                       {login ? "Sign up" : "Login"}!
                     </Link>
