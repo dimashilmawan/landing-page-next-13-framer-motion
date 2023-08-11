@@ -1,17 +1,20 @@
+"use client";
 import Container from "@/components/Container";
-import illustrationEditorDesk from "@/images/illustration-editor-desktop.svg";
-import illustrationEditorMobile from "@/images/illustration-editor-mobile.svg";
-import Image from "next/image";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const Editor = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { amount: 0.4 });
+
   return (
-    <div className="overflow-hidden" id="illustration-desk">
-      <Container className="h-full pb-60 pt-32 lg:pb-52 lg:pt-28 md:py-28  md:pb-40 sm:pb-60 xs:py-20 xs:pb-40">
+    <div ref={ref} className="overflow-hidden" id="illustration-desk">
+      <Container className="h-full pb-60 pt-32 xl:pb-56 xl:pt-28 lg:pb-44 lg:pt-20 md:py-28  md:pb-40 sm:pb-60 xs:py-20 xs:pb-40">
         <h2 className="text-center text-[2.75rem] font-semibold text-[#1f3f5b] lg:text-3xl xs:text-2xl">
           Design for the future
         </h2>
-        <div className="mt-20 flex xl:mt-14 lg:gap-8 sm:flex-col sm:gap-20 xs:mt-8 xs:gap-16">
-          <div className="flex-1 sm:order-2 sm:text-center">
+        <div className="mt-20 flex xl:mt-14 xl:gap-10 lg:gap-16 md:flex-col sm:gap-20 xs:mt-8 xs:gap-16">
+          <div className="flex-1  md:order-2 sm:text-center">
             <h3 className="text-3xl font-semibold text-[#1f3f5b] xl:text-2xl lg:text-xl xs:text-lg">
               Introducing an extensible editor
             </h3>
@@ -35,16 +38,21 @@ const Editor = () => {
               dolor sit amet.
             </p>
           </div>
-          <div className="flex flex-1 items-center justify-center sm:order-1 ">
-            <Image
+          <div className="flex flex-1 items-center justify-center  md:order-1">
+            <motion.img
+              animate={{ opacity: isInView ? 1 : 1, x: isInView ? 125 : 700 }}
+              transition={{ delay: 0.3 }}
+              style={{ scale: 2.25 }}
               alt="illustration editor desktop"
-              src={illustrationEditorDesk}
-              className="h-auto w-[300px] -translate-y-4 translate-x-48 scale-[3] object-cover xl:-translate-y-0 xl:scale-[2.75] lg:scale-[2.5] sm:hidden"
+              src="/images/illustration-editor-desktop.svg"
+              className="h-auto w-[300px] object-cover md:hidden"
             />
-            <Image
+            <motion.img
+              animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : 300 }}
+              transition={{ delay: 0 }}
               alt="illustration editor mobile"
-              src={illustrationEditorMobile}
-              className="hidden h-auto w-full sm:block"
+              src="/images/illustration-editor-mobile.svg"
+              className="hidden h-auto w-full md:block"
             />
           </div>
         </div>
