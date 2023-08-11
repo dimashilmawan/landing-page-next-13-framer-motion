@@ -80,7 +80,7 @@ const Modal = ({ onCloseModal, onToggleDropdown, dropdown }) => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -350 }}
     >
-      <ContainerModal className="fixed left-0 right-0 top-32 block rounded-2xl bg-white/95  pb-12 pt-8 text-xl text-[rgba(31,63,91,0.8)] sm:text-lg xs:top-28 xs:pb-8 xs:pt-4 xs:text-base">
+      <ContainerModal className="fixed left-0 right-0 top-1/2 block -translate-y-1/2 rounded-2xl bg-white/95  pb-12 pt-8 text-xl text-[rgba(31,63,91,0.8)] sm:text-lg xs:top-28 xs:pb-8 xs:pt-4 xs:text-base">
         <button
           transition={{ delay: 0.15 }}
           className="absolute right-2 top-2 mx-auto flex h-10 w-10 items-center justify-center rounded-full sm:-bottom-20 sm:h-12 sm:w-12"
