@@ -1,28 +1,41 @@
-import Image from "next/image";
-import bgPatternIntroDesk from "@/images/bg-pattern-intro-desktop.svg";
-import bgPatternIntroMobile from "@/images/bg-pattern-intro-mobile.svg";
+"use client";
 import Navbar from "@/components/Navbar";
 import Container from "@/components/Container";
 import ButtonLink from "@/components/ButtonLink";
+import { useRef } from "react";
+import { useScroll, motion, useTransform } from "framer-motion";
 
 const Intro = () => {
+  const ref = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+
+  const opacity = useTransform(scrollYProgress, [0, 1], ["100%", "0%"]);
+  const yDesk = useTransform(scrollYProgress, [0, 0.8], [0, 300]);
+  const yMobile = useTransform(scrollYProgress, [0, 0.8], [100, 400]);
+
   return (
-    <div className="relative h-[90vh] rounded-bl-[96px] bg-gradient-to-r from-[#ff8f70] to-[#ff3d54] lg:h-[75vh] sm:bg-gradient-to-b ">
-      <div className=" absolute left-0 top-0 h-full w-full overflow-hidden rounded-bl-[96px]">
-        <Image
+    <div
+      ref={ref}
+      className="relative h-[90vh]  rounded-bl-[96px] bg-gradient-to-r from-[#ff8f70] to-[#ff3d54] lg:h-[75vh] sm:bg-gradient-to-b "
+    >
+      <motion.div className=" absolute inset-0 flex items-center justify-center overflow-hidden rounded-bl-[96px]">
+        <motion.img
+          style={{ opacity, y: yDesk, scale: 1.5, x: "15%" }}
           alt="background pattern intro desk"
-          fill
-          src={bgPatternIntroDesk}
-          className="-translate-y-[40px] translate-x-[384px] scale-[2.2] object-cover sm:hidden"
-          priority
+          src="/images/bg-pattern-intro-desktop.svg"
+          className="h-auto w-full object-cover sm:hidden"
         />
-        <Image
+        <motion.img
+          style={{ opacity, y: yMobile, scale: 3.3, x: "30%" }}
           alt="background pattern intro mobile"
-          fill
-          src={bgPatternIntroMobile}
-          className="hidden translate-x-[124px] translate-y-[124px] scale-[2.2] object-cover sm:block"
+          src="/images/bg-pattern-intro-mobile.svg"
+          className="hidden h-auto w-full  object-cover sm:block"
         />
-      </div>
+      </motion.div>
       <Container className="relative z-50 flex h-full flex-col pt-10">
         <Navbar />
         <div className="flex h-full flex-col items-center justify-center">

@@ -21,7 +21,7 @@ const MobileNav = () => {
 
   return (
     <>
-      <div className="hidden lg:flex">
+      <div className="hidden flex-1 justify-end  lg:flex [@media(any-hover:none)]:flex">
         <AnimatePresence initial={false}>
           {!isOpen && (
             <motion.button
@@ -39,7 +39,7 @@ const MobileNav = () => {
           )}
         </AnimatePresence>
       </div>
-      <AnimatePresence mode="popLayout">
+      <AnimatePresence>
         {isOpen && (
           <>
             <Backdrop onCloseModal={closeModalHandler} />
@@ -56,15 +56,14 @@ const MobileNav = () => {
 };
 export default MobileNav;
 
-const Backdrop = ({ onCloseModal }) => {
+const Backdrop = () => {
   return (
     <motion.div
-      className="fixed left-0 top-0 hidden h-full w-full bg-[rgba(255,61,84,0.75)] backdrop-blur-sm lg:block"
+      className="fixed left-0 top-0 h-full w-full bg-[rgba(255,61,84,0.75)] backdrop-blur-sm "
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ delay: 0.15 }}
-      // onClick={onCloseModal}
     >
       &nbsp;
     </motion.div>
@@ -81,12 +80,10 @@ const Modal = ({ onCloseModal, onToggleDropdown, dropdown }) => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -350 }}
     >
-      <ContainerModal className="fixed left-0 right-0 top-36 hidden rounded-2xl bg-white/95 pb-12 pt-8 text-xl text-[rgba(31,63,91,0.8)] lg:block sm:text-lg xs:top-28 xs:pb-8 xs:pt-4 xs:text-base">
-        <motion.button
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
+      <ContainerModal className="fixed left-0 right-0 top-32 block rounded-2xl bg-white/95  pb-12 pt-8 text-xl text-[rgba(31,63,91,0.8)] sm:text-lg xs:top-28 xs:pb-8 xs:pt-4 xs:text-base">
+        <button
           transition={{ delay: 0.15 }}
-          className="absolute -bottom-24 left-0 right-0 mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-white/95 shadow-md sm:-bottom-20 sm:h-12 sm:w-12"
+          className="absolute right-2 top-2 mx-auto flex h-10 w-10 items-center justify-center rounded-full sm:-bottom-20 sm:h-12 sm:w-12"
           onClick={() => {
             onCloseModal();
             onToggleDropdown();
@@ -95,9 +92,9 @@ const Modal = ({ onCloseModal, onToggleDropdown, dropdown }) => {
           <Image
             alt="icon close"
             src={iconClose}
-            className="h-auto w-[20px] sm:w-[16px]"
+            className="h-auto w-[24px] sm:w-[20px]"
           />
-        </motion.button>
+        </button>
         <Labels dropdown={dropdown} onToggleDropdown={onToggleDropdown} />
         <div className="flex flex-col items-center justify-center gap-4 pt-8">
           <Link onClick={onCloseModal} href="/login">

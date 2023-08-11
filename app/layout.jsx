@@ -22,7 +22,7 @@ export default function RootLayout(props) {
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={` ${overpass.variable} ${ubuntu.variable} ${overpass.className} `}
+        className={` ${overpass.variable} ${ubuntu.variable} ${overpass.className} overflow-x-hidden`}
       >
         {props.children}
         {props.auth}

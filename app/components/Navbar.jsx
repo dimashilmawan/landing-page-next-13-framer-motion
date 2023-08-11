@@ -10,8 +10,7 @@ const Navbar = () => {
   return (
     <div className="flex items-center font-ubuntu font-medium text-white/75 lg:justify-between">
       <Logo />
-      <MobileNav />
-      <div className="flex flex-1 lg:hidden">
+      <div className="flex flex-1 lg:hidden [@media(any-hover:none)]:hidden">
         <nav className="ml-12 flex-1">
           <ul className="flex gap-8">
             {navLinkText.map((text) => (
@@ -26,6 +25,7 @@ const Navbar = () => {
           <ButtonLink href={"/signup"}>Sign up</ButtonLink>
         </div>
       </div>
+      <MobileNav />
     </div>
   );
 };
