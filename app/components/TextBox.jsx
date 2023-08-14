@@ -14,7 +14,8 @@ const TextBox = ({ children, className, direction }) => {
         scale: 1,
         x: 0,
       }}
-      viewport={{ once: false }}
+      transition={{ type: "tween" }}
+      viewport={{ once: true }}
       className={className}
     >
       <h3 className="text-3xl font-semibold text-[#1f3f5b] xl:text-2xl lg:text-xl xs:text-lg">

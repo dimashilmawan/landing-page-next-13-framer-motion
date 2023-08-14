@@ -13,9 +13,6 @@ const AuthModal = ({ login }) => {
     <div
       className={`flex h-screen w-full flex-col bg-gradient-to-r from-[#ff8f70] to-[#ff3d54] pt-10 sm:bg-gradient-to-b `}
     >
-      <Container>
-        <Navbar />
-      </Container>
       <div className="flex h-full items-center justify-center ">
         <ContainerModal className="h-[28rem] overflow-hidden rounded-3xl bg-white shadow-xl shadow-[#ff525d]">
           <div className="flex h-full items-center justify-center gap-16 ">
