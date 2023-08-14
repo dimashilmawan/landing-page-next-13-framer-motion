@@ -14,6 +14,7 @@ const PhonesDesc = () => {
         x: 0,
       }}
       viewport={{ once: true, amount: 0.3 }}
+      transition={{ delay: 0.1, type: "tween", duration: 0.3 }}
       className="flex-1"
     >
       <h3 className="text-4xl font-semibold text-white xl:text-3xl lg:text-2xl sm:text-xl">

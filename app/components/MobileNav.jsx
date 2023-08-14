@@ -63,7 +63,7 @@ const Backdrop = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{ delay: 0.15 }}
+      transition={{ delay: 0.2, duration: 0.2 }}
     >
       &nbsp;
     </motion.div>
@@ -79,6 +79,7 @@ const Modal = ({ onCloseModal, onToggleDropdown, dropdown }) => {
       initial={{ opacity: 0, y: -350 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -350 }}
+      transition={{ type: "tween", duration: 0.2 }}
     >
       <ContainerModal className="fixed left-0 right-0 top-1/2 block -translate-y-1/2 rounded-2xl bg-white/95  pb-12 pt-8 text-xl text-[rgba(31,63,91,0.8)] shadow-xl sm:text-lg xs:pb-8 xs:pt-4 xs:text-base">
         <button

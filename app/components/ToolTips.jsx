@@ -15,6 +15,7 @@ const ToolTips = ({ label, isTooltipsActive }) => {
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0 }}
+          transition={{ type: "tween", duration: 0.2 }}
           style={{ left: "50%", top: 60, translateX: "-50%" }}
           className=" absolute w-36 rounded-md bg-white font-normal text-gray-700/90 shadow-2xl"
         >
@@ -22,7 +23,7 @@ const ToolTips = ({ label, isTooltipsActive }) => {
             {tooltipsTextObj[label.toLowerCase()].map((text) => (
               <li
                 key={text}
-                className="rounded-[3px] py-1 capitalize transition-all hover:bg-[#ff727e] hover:text-white"
+                className="rounded-[3px] py-1 capitalize transition-all duration-75 hover:bg-[#ff727e] hover:text-white"
               >
                 <Link href="/">{text}</Link>
               </li>

@@ -19,6 +19,7 @@ const AuthModal = ({ login }) => {
             <motion.div
               initial={{ x: login ? "100%" : "-100%", opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
+              transition={{ type: "tween", duration: 0.3 }}
               className={`relative z-30 flex flex-1 items-center justify-center md:hidden ${
                 !login ? "order-3" : " "
               }`}
@@ -31,6 +32,7 @@ const AuthModal = ({ login }) => {
             <motion.div
               initial={{ x: login ? "-100%" : "100%", opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
+              transition={{ type: "tween", duration: 0.3 }}
               className={`order-2 flex flex-1 items-center justify-normal`}
             >
               <div className="w-full">
