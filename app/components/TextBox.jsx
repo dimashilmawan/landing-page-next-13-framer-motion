@@ -14,7 +14,6 @@ const TextBox = ({ children, className, direction }) => {
         scale: 1,
         x: 0,
       }}
-      transition={{ type: "tween" }}
       viewport={{ once: true }}
       className={className}
     >

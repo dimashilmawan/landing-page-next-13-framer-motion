@@ -13,7 +13,6 @@ const PhonesDesc = () => {
         scale: 1,
         x: 0,
       }}
-      transition={{ type: "tween" }}
       viewport={{ once: true }}
       className="flex-1"
     >

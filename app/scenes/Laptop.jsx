@@ -10,7 +10,7 @@ const Laptop = () => {
             <img
               alt="illustration laptop desktop"
               src="/images/illustration-laptop-desktop.svg"
-              className="h-auto w-[300px] -translate-x-20 scale-[3] xl:-translate-x-28 xl:scale-[2.8] lg:-translate-x-36 lg:scale-[2.5] sm:hidden"
+              className="h-auto w-[300px] -translate-x-24 scale-[2.75] xl:-translate-x-28 xl:scale-[2.8] lg:-translate-x-36 lg:scale-[2.5] sm:hidden"
             />
             <img
               alt="illustration laptop desktop"
