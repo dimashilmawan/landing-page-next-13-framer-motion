@@ -1,4 +1,3 @@
-import Navbar from "@/components/Navbar";
 import Container from "@/components/Container";
 import IntroContent from "@/components/intro/IntroContent";
 
