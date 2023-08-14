@@ -6,12 +6,12 @@ const TextBox = ({ children, className, direction }) => {
     <motion.div
       initial={{
         opacity: 0,
-        scale: 0,
+        // scale: 0,
         x: direction === "left" ? "-50%" : "50%",
       }}
       whileInView={{
         opacity: 1,
-        scale: 1,
+        // scale: 1,
         x: 0,
       }}
       viewport={{ once: true, amount: 0.3 }}

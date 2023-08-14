@@ -25,9 +25,9 @@ const MobileNav = () => {
         <AnimatePresence initial={false}>
           {!isOpen && (
             <motion.button
-              initial={{ scale: 0 }}
-              animate={{ scale: 1, transition: { delay: 0.15 } }}
-              exit={{ scale: 0 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1, transition: { delay: 0.2 } }}
+              exit={{ opacity: 0 }}
               onClick={() => setIsOpen(true)}
             >
               <Image
