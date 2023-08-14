@@ -6,7 +6,7 @@ const Laptop = () => {
     <div>
       <Container className="py-64 xl:py-52 lg:py-44 md:py-36 sm:py-28 sm:text-center xs:py-20">
         <div className="flex gap-12 lg:gap-8 sm:flex-col sm:gap-16 xs:gap-12">
-          <div className="flex flex-1 items-center justify-center">
+          <div className="flex flex-1 items-center justify-center ">
             <img
               alt="illustration laptop desktop"
               src="/images/illustration-laptop-desktop.svg"

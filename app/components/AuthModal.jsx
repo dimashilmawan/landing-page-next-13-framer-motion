@@ -17,9 +17,8 @@ const AuthModal = ({ login }) => {
         <ContainerModal className="h-[28rem] overflow-hidden rounded-3xl bg-white shadow-xl shadow-[#ff525d]">
           <div className="flex h-full items-center justify-center gap-16 ">
             <motion.div
-              initial={{ x: login ? "100%" : "-100%", opacity: 0 }}
+              initial={{ x: login ? 300 : -300, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              transition={{ type: "tween", duration: 0.3 }}
               className={`relative z-30 flex flex-1 items-center justify-center md:hidden ${
                 !login ? "order-3" : " "
               }`}
@@ -30,9 +29,8 @@ const AuthModal = ({ login }) => {
               />
             </motion.div>
             <motion.div
-              initial={{ x: login ? "-100%" : "100%", opacity: 0 }}
+              initial={{ x: login ? -300 : 300, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              transition={{ type: "tween", duration: 0.3 }}
               className={`order-2 flex flex-1 items-center justify-normal`}
             >
               <div className="w-full">
