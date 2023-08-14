@@ -19,7 +19,7 @@ const Editor = () => {
             <img
               alt="illustration editor desktop"
               src="/images/illustration-editor-desktop.svg"
-              className="h-auto w-[300px] translate-x-16 scale-[2.5] object-cover xl:translate-x-24 xl:scale-[2.3] lg:translate-x-28 lg:scale-[2] md:hidden"
+              className="h-auto w-[300px] translate-x-20 scale-[2.5] object-cover xl:translate-x-24 xl:scale-[2.3] lg:translate-x-28 lg:scale-[2] md:hidden"
             />
             <img
               alt="illustration editor mobile"
