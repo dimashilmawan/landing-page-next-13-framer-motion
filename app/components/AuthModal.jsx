@@ -1,33 +1,42 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import Container, { ContainerModal } from "./Container";
-import illustrationPhones from "@/images/illustration-phones-cropped.svg";
-import illustrationLaptopMobile from "@/images/illustration-laptop-mobile.svg";
 import Navbar from "./Navbar";
+import { motion } from "framer-motion";
+
+const illustrationPhones = "/images/illustration-phones-cropped.svg";
+const illustrationLaptopMobile = "/images/illustration-laptop-mobile.svg";
 
 const AuthModal = ({ login }) => {
   return (
     <div
-      className={`flex h-screen w-full flex-col bg-gradient-to-r from-[#ff8f70] to-[#ff3d54] pt-12 sm:bg-gradient-to-b `}
+      className={`flex h-screen w-full flex-col bg-gradient-to-r from-[#ff8f70] to-[#ff3d54] pt-10 sm:bg-gradient-to-b `}
     >
       <Container>
         <Navbar />
       </Container>
-      <div className="flex h-full items-center justify-center">
-        <ContainerModal className="overflow-hidden rounded-3xl bg-white shadow-xl shadow-[#ff525d]">
-          <div className="flex gap-16 py-16 sm:py-12 xs:py-8">
-            <div
-              className={`flex flex-1 items-center justify-center md:hidden ${
+      <div className="flex h-full items-center justify-center ">
+        <ContainerModal className="h-[28rem] overflow-hidden rounded-3xl bg-white shadow-xl shadow-[#ff525d]">
+          <div className="flex h-full items-center justify-center gap-16 ">
+            <motion.div
+              initial={{ x: login ? "100%" : "-100%", opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              className={`relative z-30 flex flex-1 items-center justify-center md:hidden ${
                 !login ? "order-3" : " "
               }`}
             >
-              <Image
-                alt="illustration laptop"
+              <img
+                alt="Image Auth"
                 src={login ? illustrationLaptopMobile : illustrationPhones}
               />
-            </div>
-            <div className={`order-2 flex flex-1 items-center justify-normal`}>
-              <div className="w-full ">
+            </motion.div>
+            <motion.div
+              initial={{ x: login ? "-100%" : "100%", opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              className={`order-2 flex flex-1 items-center justify-normal`}
+            >
+              <div className="w-full">
                 <h1 className="text-center text-3xl font-medium text-[rgba(31,63,91,0.95)]">
                   {login ? "Welcome!" : "Create account"}
                 </h1>
@@ -82,7 +91,7 @@ const AuthModal = ({ login }) => {
                   </div>
                 </form>
               </div>
-            </div>
+            </motion.div>
           </div>
         </ContainerModal>
       </div>

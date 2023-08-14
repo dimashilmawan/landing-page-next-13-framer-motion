@@ -59,7 +59,7 @@ export default MobileNav;
 const Backdrop = () => {
   return (
     <motion.div
-      className="fixed left-0 top-0 h-full w-full bg-[rgba(255,61,84,0.75)] backdrop-blur-sm "
+      className="fixed left-0 top-0 z-[150] h-full w-full bg-[rgba(255,61,84,0.75)] backdrop-blur-sm "
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -75,12 +75,12 @@ const labels = ["product", "company", "connect"];
 const Modal = ({ onCloseModal, onToggleDropdown, dropdown }) => {
   return (
     <motion.div
-      className="fixed inset-0"
+      className="fixed inset-0 z-[200]"
       initial={{ opacity: 0, y: -350 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -350 }}
     >
-      <ContainerModal className="fixed left-0 right-0 top-1/2 block -translate-y-1/2 rounded-2xl bg-white/95  pb-12 pt-8 text-xl text-[rgba(31,63,91,0.8)] sm:text-lg  xs:pb-8 xs:pt-4 xs:text-base">
+      <ContainerModal className="fixed left-0 right-0 top-1/2 block -translate-y-1/2 rounded-2xl bg-white/95  pb-12 pt-8 text-xl text-[rgba(31,63,91,0.8)] shadow-xl sm:text-lg xs:pb-8 xs:pt-4 xs:text-base">
         <button
           transition={{ delay: 0.15 }}
           className="absolute right-2 top-2 mx-auto flex h-10 w-10 items-center justify-center rounded-full sm:-bottom-20 sm:h-12 sm:w-12"
