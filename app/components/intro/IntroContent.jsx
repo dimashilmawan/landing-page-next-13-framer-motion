@@ -30,7 +30,7 @@ const IntroContent = () => {
           animate={{ x: 0, opacity: 1 }}
           transition={{ delay: 0.3 }}
         >
-          <ButtonLink outlined href={"#illustration-desk"}>
+          <ButtonLink outlined href="/#illustration-desk">
             Learn More
           </ButtonLink>
         </motion.div>
