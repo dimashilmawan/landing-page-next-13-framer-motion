@@ -9,7 +9,12 @@ const Footer = () => {
         <div className="flex gap-12 sm:flex-col">
           <div className="flex flex-1 justify-center ">
             <div>
-              <Image alt="logo" src={logo} className=" lg:h-auto lg:w-20" />
+              <Image
+                alt="logo"
+                src={logo}
+                // className="h-auto w-[100px] lg:w-20"
+                className="h-auto w-[100px] object-cover"
+              />
             </div>
           </div>
           <FooterGroup>

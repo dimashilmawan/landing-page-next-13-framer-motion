@@ -23,6 +23,7 @@ const AuthModal = ({ login }) => {
             >
               <Image
                 alt="Image Auth"
+                className="h-auto w-[100px] object-cover"
                 src={login ? illustrationLaptopMobile : illustrationPhones}
               />
             </motion.div>
