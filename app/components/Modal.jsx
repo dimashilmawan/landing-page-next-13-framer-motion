@@ -3,8 +3,8 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ButtonLinkMobile } from "@/components/ButtonLink";
 import Image from "next/image";
-import iconClose from "../../public/images/icon-close.svg";
-import iconArrow from "../../public/images/icon-arrow-dark.svg";
+import iconClose from "../../public/images/icon-close.png";
+import iconArrow from "../../public/images/icon-arrow-dark.png";
 
 const Modal = ({ onCloseModal, onToggleDropdown, dropdown }) => {
   return (
@@ -63,7 +63,7 @@ const Labels = ({ dropdown, onToggleDropdown }) => {
               <Image
                 alt="icon arrow"
                 src={iconArrow}
-                className={`${
+                className={`-mb-1 h-auto w-[12px]  ${
                   dropdown === label ? "rotate-180 " : ""
                 } transition-all`}
               />

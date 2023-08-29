@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import iconArrow from "@/images/icon-arrow-light.svg";
+import iconArrow from "@/images/icon-arrow-light.png";
 
 import ToolTips from "./ToolTips";
 import { useState } from "react";
@@ -24,7 +24,7 @@ const NavLink = ({ children }) => {
       <Image
         alt=""
         src={iconArrow}
-        className="-mb-[2px] h-auto w-[10px] opacity-75 transition-all duration-200 group-hover:rotate-180 group-hover:opacity-100"
+        className="-mb-[2px] h-auto w-[12px] opacity-75 transition-all duration-200 group-hover:rotate-180 group-hover:opacity-100"
       />
       <ToolTips isTooltipsActive={isTooltipsActive} label={children} />
     </motion.li>

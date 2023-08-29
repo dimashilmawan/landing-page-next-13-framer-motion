@@ -15,7 +15,6 @@ const ToolTips = ({ label, isTooltipsActive }) => {
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0 }}
-          transition={{ type: "tween", duration: 0.2 }}
           style={{ left: "50%", top: 60, translateX: "-50%" }}
           className=" absolute w-36 rounded-md bg-white font-normal text-gray-700/90 shadow-2xl"
         >

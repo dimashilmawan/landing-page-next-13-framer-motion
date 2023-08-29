@@ -3,8 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { ContainerModal } from "./Container";
 import { motion } from "framer-motion";
-import illustrationPhones from "../../public/images/illustration-phones-cropped.svg";
-import illustrationLaptopMobile from "../../public/images/illustration-laptop-mobile.svg";
+import illustrationPhones from "@/images/illustration-phones-cropped.png";
+import illustrationLaptopMobile from "@/images/illustration-laptop-mobile.png";
 
 const AuthModal = ({ login }) => {
   return (
@@ -23,7 +23,7 @@ const AuthModal = ({ login }) => {
             >
               <Image
                 alt="Image Auth"
-                className="h-auto w-[100px] object-cover"
+                className="h-auto w-full object-cover"
                 src={login ? illustrationLaptopMobile : illustrationPhones}
               />
             </motion.div>

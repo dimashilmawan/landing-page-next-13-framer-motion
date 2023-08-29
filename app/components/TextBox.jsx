@@ -1,18 +1,6 @@
-"use client";
-import { motion } from "framer-motion";
 const TextBox = ({ children, className, direction }) => {
   return (
-    <motion.div
-      initial={{
-        opacity: 0,
-        scale: 0.5,
-        y: "100%",
-        x: direction === "left" ? "-50%" : "50%",
-      }}
-      whileInView={{ opacity: 1, y: 0, x: 0, scale: 1 }}
-      transition={{ type: "tween" }}
-      className={` ${className}`}
-    >
+    <div className={` ${className}`}>
       <h3 className="text-3xl font-semibold text-[#1f3f5b] xl:text-2xl lg:text-xl xs:text-lg">
         {children}
       </h3>
@@ -23,7 +11,7 @@ const TextBox = ({ children, className, direction }) => {
         voluptatem magni! Lorem ipsum dolor sit amet, consectetur adipisicing
         elit. Expedita, nisi. Lorem ipsum dolor sit amet.
       </p>
-    </motion.div>
+    </div>
   );
 };
 export default TextBox;
