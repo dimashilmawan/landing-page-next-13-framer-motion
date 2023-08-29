@@ -1,7 +1,7 @@
 import Container from "@/components/Container";
 import TextBox from "@/components/TextBox";
-import illustrationLaptopDesk from "@/images/illustration-laptop-desktop.svg";
-import illustrationLaptopMobile from "@/images/illustration-laptop-mobile.svg";
+import illustrationLaptopDesk from "@/images/illustration-laptop-desktop.png";
+import illustrationLaptopMobile from "@/images/illustration-laptop-mobile.png";
 import Image from "next/image";
 
 const Laptop = () => {
@@ -13,11 +13,13 @@ const Laptop = () => {
             <Image
               alt="illustration laptop desktop"
               src={illustrationLaptopDesk}
+              quality={85}
               className="h-auto w-[300px] -translate-x-24 scale-[2.75] xl:-translate-x-28 xl:scale-[2.8] lg:-translate-x-36 lg:scale-[2.5] sm:hidden"
             />
             <Image
               alt="illustration laptop desktop"
               src={illustrationLaptopMobile}
+              quality={85}
               className="hidden h-auto w-full sm:block "
             />
           </div>

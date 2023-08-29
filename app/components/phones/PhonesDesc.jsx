@@ -5,7 +5,7 @@ const PhonesDesc = () => {
     <motion.div
       initial={{ opacity: 0, x: "-50%" }}
       whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ amount: 0.5 }}
+      viewport={{ amount: 0.5, once: true }}
       className="flex-1 "
     >
       <h3 className="text-4xl font-semibold text-white xl:text-3xl lg:text-2xl sm:text-xl">

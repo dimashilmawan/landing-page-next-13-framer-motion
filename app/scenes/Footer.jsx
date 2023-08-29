@@ -10,10 +10,10 @@ const Footer = () => {
           <div className="flex flex-1 justify-center ">
             <div>
               <Image
-                alt="logo"
+                alt="footer logo"
                 src={logo}
                 // className="h-auto w-[100px] lg:w-20"
-                className="h-auto w-[100px] object-cover"
+                className="h-auto w-[100px]"
               />
             </div>
           </div>

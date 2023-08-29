@@ -1,8 +1,8 @@
 import Container from "@/components/Container";
 import PhonesDesc from "@/components/phones/PhonesDesc";
 import Image from "next/image";
-import illustrationPhones from "@/images/illustration-phones.svg";
-import bgPatternCircles from "@/images/bg-pattern-circles.svg";
+import illustrationPhones from "@/images/illustration-phones.png";
+import bgPatternCircles from "@/images/bg-pattern-circles.png";
 
 const Phones = () => {
   return (
@@ -11,7 +11,7 @@ const Phones = () => {
         <Image
           alt="bg pattern circles"
           src={bgPatternCircles}
-          className="absolute -bottom-[20%] -left-[10%] scale-110 xl:-left-[20%] xl:scale-100 sm:bottom-0 sm:left-1/2 sm:-translate-x-1/2 sm:-translate-y-40 sm:scale-150 xs:-translate-y-56"
+          className="absolute -bottom-[50%] -left-[10%] xl:-left-[20%] xl:scale-100 sm:bottom-0 sm:left-1/2 sm:-translate-x-1/2 sm:-translate-y-40 sm:scale-150 xs:-translate-y-56"
         />
       </div>
       <Container className="sm:text-center">
@@ -20,6 +20,7 @@ const Phones = () => {
             <Image
               alt="illustration phones"
               src={illustrationPhones}
+              quality={90}
               className="h-auto w-[150px] translate-y-5  scale-[3.5]  xl:scale-[3] lg:translate-y-4 lg:scale-[2.5] sm:w-[93px] sm:-translate-y-20 sm:scale-[4] xs:scale-[3.1]"
             />
             {/* <Image

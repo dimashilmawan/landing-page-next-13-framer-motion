@@ -6,7 +6,7 @@ const TextBox = ({ children, className, direction, delay = false }) => {
     <motion.div
       initial={{ opacity: 0, x: direction === "left" ? "50%" : "-50%" }}
       whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ amount: 0.5 }}
+      viewport={{ amount: 0.5, once: true }}
       transition={{ delay: delay ? 0.2 : 0 }}
       className={`${className}`}
     >

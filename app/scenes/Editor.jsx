@@ -1,12 +1,12 @@
 import Container from "@/components/Container";
 import TextBox from "@/components/TextBox";
-import illustrationEditorDesk from "@/images/illustration-editor-desktop.svg";
-import illustrationEditorMobile from "@/images/illustration-editor-mobile.svg";
+import illustrationEditorDesk from "@/images/illustration-editor-desktop.png";
+import illustrationEditorMobile from "@/images/illustration-editor-mobile.png";
 import Image from "next/image";
 
 const Editor = () => {
   return (
-    <div className="overflow-hidden " id="illustration-desk">
+    <div className="overflow-hidden " id="illustration-desk ">
       <Container className="h-full pb-60 pt-32 xl:pb-56 xl:pt-28 lg:pb-44 lg:pt-20 md:py-28  md:pb-40 sm:pb-60 xs:py-20 xs:pb-40">
         <h2 className="text-center text-[2.75rem] font-semibold text-[#1f3f5b] lg:text-3xl xs:text-2xl">
           Design for the future
@@ -19,14 +19,28 @@ const Editor = () => {
             </TextBox>
           </div>
           <div className="relative z-50 flex flex-1 items-center justify-center md:order-1">
-            <Image
+            {/* <Image
               alt="illustration editor desktop"
               src={illustrationEditorDesk}
+              placeholder="blur"
               className="h-auto w-[300px] translate-x-20 scale-[2.5] object-cover xl:translate-x-24 xl:scale-[2.3] lg:translate-x-28 lg:scale-[2] md:hidden"
             />
             <Image
               alt="illustration editor mobile"
               src={illustrationEditorMobile}
+              placeholder="blur"
+              className="hidden h-auto w-full md:block"
+            /> */}
+            <Image
+              alt="illustration editor desktop"
+              src={illustrationEditorDesk}
+              quality={85}
+              className="h-auto w-full translate-x-20 scale-125  xl:translate-x-24  lg:translate-x-28 md:hidden"
+            />
+            <Image
+              alt="illustration editor mobile"
+              src={illustrationEditorMobile}
+              quality={85}
               className="hidden h-auto w-full md:block"
             />
           </div>

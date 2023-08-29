@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import iconHamburger from "@/images/icon-hamburger.png";
+import iconHamburger from "@/images/icon-hamburger.svg";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Modal from "./Modal";
