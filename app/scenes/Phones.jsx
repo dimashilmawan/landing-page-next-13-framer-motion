@@ -7,16 +7,16 @@ import bgPatternCircles from "@/images/bg-pattern-circles.png";
 const Phones = () => {
   return (
     <div className="relative  rounded-bl-[96px] rounded-tr-[96px] bg-gradient-to-r from-[#2c2d3f] to-[#3f4164] py-28 xl:py-20 lg:py-16">
-      <div className="absolute left-0 top-0 h-full w-full overflow-hidden rounded-bl-[96px] rounded-tr-[96px] ">
+      {/* <div className="absolute left-0 top-0 h-full w-full overflow-hidden rounded-bl-[96px] rounded-tr-[96px] ">
         <Image
           alt="bg pattern circles"
           src={bgPatternCircles}
           className="absolute -bottom-[20%] -left-[10%] scale-110 xl:-left-[20%] xl:scale-100 sm:bottom-0 sm:left-1/2 sm:-translate-x-1/2 sm:-translate-y-40 sm:scale-150 xs:-translate-y-56"
         />
-      </div>
-      <Container className="relative sm:text-center">
+      </div> */}
+      <Container className="sm:text-center">
         <div className="flex lg:gap-8 md:gap-16 sm:flex-col xs:gap-4">
-          <div className="flex flex-1 items-center justify-center ">
+          <div className="relative z-50 flex flex-1 items-center justify-center">
             <Image
               alt="illustration phones"
               src={illustrationPhones}

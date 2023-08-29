@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={` ${overpass.variable} ${ubuntu.variable} ${overpass.className} overflow-x-hidden`}
+        className={` ${overpass.variable} ${ubuntu.variable} ${overpass.className}`}
       >
         <>
           <Container className="absolute left-0 top-10 z-[100] ">

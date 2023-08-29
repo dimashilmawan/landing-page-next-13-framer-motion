@@ -7,9 +7,9 @@ import Image from "next/image";
 const Laptop = () => {
   return (
     <div>
-      <Container className="overflow-hidden py-64 xl:py-52 lg:py-44 md:py-36 sm:py-28 sm:text-center xs:py-20">
+      <Container className="overflow-x-hidden py-64 xl:py-52 lg:py-44 md:py-36 sm:py-28 sm:text-center xs:py-20">
         <div className="flex gap-12 lg:gap-8 sm:flex-col sm:gap-16 xs:gap-12">
-          <div className="flex flex-1 items-center justify-center ">
+          <div className="relative z-50 flex flex-1 items-center justify-center">
             <Image
               alt="illustration laptop desktop"
               src={illustrationLaptopDesk}
@@ -23,7 +23,9 @@ const Laptop = () => {
           </div>
           <div className="flex-1 ">
             <TextBox>Free, open, simple</TextBox>
-            <TextBox className="mt-16 md:mt-10">Powerful tooling</TextBox>
+            <TextBox delay className="mt-16 md:mt-10">
+              Powerful tooling
+            </TextBox>
           </div>
         </div>
       </Container>

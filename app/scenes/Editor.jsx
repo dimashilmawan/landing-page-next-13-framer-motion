@@ -14,11 +14,11 @@ const Editor = () => {
         <div className="mt-20 flex gap-8 xl:mt-14 md:flex-col xs:mt-8 ">
           <div className="flex-1 md:order-2 sm:text-center">
             <TextBox direction="left">Introducing an extensible editor</TextBox>
-            <TextBox direction="left" className="mt-16 lg:mt-8">
+            <TextBox direction="left" delay className="mt-16 lg:mt-8">
               Robust content management
             </TextBox>
           </div>
-          <div className="flex flex-1 items-center justify-center md:order-1">
+          <div className="relative z-50 flex flex-1 items-center justify-center md:order-1">
             <Image
               alt="illustration editor desktop"
               src={illustrationEditorDesk}

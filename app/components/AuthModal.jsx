@@ -23,6 +23,7 @@ const AuthModal = ({ login }) => {
             >
               <Image
                 alt="Image Auth"
+                priority
                 className="h-auto w-full object-cover"
                 src={login ? illustrationLaptopMobile : illustrationPhones}
               />

@@ -29,6 +29,7 @@ const MobileNav = () => {
               <Image
                 alt="icon hamburger "
                 src={iconHamburger}
+                priority
                 className="h-auto w-[32px]"
               />
             </motion.button>

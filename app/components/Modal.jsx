@@ -63,6 +63,7 @@ const Labels = ({ dropdown, onToggleDropdown }) => {
               <Image
                 alt="icon arrow"
                 src={iconArrow}
+                priority
                 className={`-mb-1 h-auto w-[12px]  ${
                   dropdown === label ? "rotate-180 " : ""
                 } transition-all`}
