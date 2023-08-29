@@ -9,9 +9,10 @@ import iconArrow from "../../public/images/icon-arrow-dark.png";
 const Modal = ({ onCloseModal, onToggleDropdown, dropdown }) => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: "-100%" }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: "-100%" }}
+      initial={{ opacity: 0, scale: 0.3 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 0 }}
+      style={{ translateY: "-50%" }}
       className={`fixed left-0 right-0 top-1/2 z-[200] mx-auto block w-[48rem] max-w-3xl rounded-2xl bg-white/95 px-16 pb-12 pt-8 text-xl text-[rgba(31,63,91,0.8)] shadow-xl lg:w-[calc(100%_-_8rem)] md:w-[calc(100%_-_6rem)] md:px-12 sm:w-[calc(100%_-_4rem)] sm:px-8 sm:text-lg xs:w-[calc(100%_-_2rem)] xs:px-4 xs:pb-8 xs:pt-4 xs:text-base`}
     >
       <button
