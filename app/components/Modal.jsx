@@ -12,7 +12,6 @@ const Modal = ({ onCloseModal, onToggleDropdown, dropdown }) => {
       initial={{ opacity: 0, y: "-100%" }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: "-100%" }}
-      style={{ translateY: "-50%" }}
       className={`fixed left-0 right-0 top-1/2 z-[200] mx-auto block w-[48rem] max-w-3xl rounded-2xl bg-white/95 px-16 pb-12 pt-8 text-xl text-[rgba(31,63,91,0.8)] shadow-xl lg:w-[calc(100%_-_8rem)] md:w-[calc(100%_-_6rem)] md:px-12 sm:w-[calc(100%_-_4rem)] sm:px-8 sm:text-lg xs:w-[calc(100%_-_2rem)] xs:px-4 xs:pb-8 xs:pt-4 xs:text-base`}
     >
       <button
