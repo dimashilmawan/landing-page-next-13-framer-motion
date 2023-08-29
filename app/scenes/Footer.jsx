@@ -1,6 +1,6 @@
 import Container from "@/components/Container";
 import Image from "next/image";
-import logo from "@/images/logo.png";
+import logo from "@/images/logo.svg";
 
 const Footer = () => {
   return (

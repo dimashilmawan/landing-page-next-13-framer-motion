@@ -1,7 +1,7 @@
 import Container from "@/components/Container";
 import TextBox from "@/components/TextBox";
-import illustrationEditorDesk from "@/images/illustration-editor-desktop.png";
-import illustrationEditorMobile from "@/images/illustration-editor-mobile.png";
+import illustrationEditorDesk from "@/images/illustration-editor-desktop.svg";
+import illustrationEditorMobile from "@/images/illustration-editor-mobile.svg";
 import Image from "next/image";
 
 const Editor = () => {

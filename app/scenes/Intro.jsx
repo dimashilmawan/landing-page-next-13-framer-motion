@@ -2,8 +2,8 @@ import Container from "@/components/Container";
 import IntroContent from "@/components/intro/IntroContent";
 import Image from "next/image";
 
-import bgPatternIntroDesk from "@/images/bg-pattern-intro-desktop.png";
-import bgPatternIntroMobile from "@/images/bg-pattern-intro-mobile.png";
+import bgPatternIntroDesk from "@/images/bg-pattern-intro-desktop.svg";
+import bgPatternIntroMobile from "@/images/bg-pattern-intro-mobile.svg";
 
 const Intro = () => {
   return (

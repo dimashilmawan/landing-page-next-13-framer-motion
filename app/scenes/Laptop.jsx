@@ -1,7 +1,7 @@
 import Container from "@/components/Container";
 import TextBox from "@/components/TextBox";
-import illustrationLaptopDesk from "@/images/illustration-laptop-desktop.png";
-import illustrationLaptopMobile from "@/images/illustration-laptop-mobile.png";
+import illustrationLaptopDesk from "@/images/illustration-laptop-desktop.svg";
+import illustrationLaptopMobile from "@/images/illustration-laptop-mobile.svg";
 import Image from "next/image";
 
 const Laptop = () => {
