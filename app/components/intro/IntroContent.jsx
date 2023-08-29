@@ -9,6 +9,7 @@ const IntroContent = () => {
       <motion.div
         initial={{ y: -500, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
+        transition={{ type: "tween" }}
       >
         <h1 className="text-center text-7xl font-semibold text-white xl:text-6xl lg:text-5xl sm:text-4xl xs:text-3xl">
           A modern publishing platform
@@ -21,7 +22,7 @@ const IntroContent = () => {
         <motion.div
           initial={{ x: -250, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          transition={{ delay: 0.3 }}
+          transition={{ delay: 0.3, type: "tween" }}
         >
           <ButtonLink href={"/signup"}>Start for Free</ButtonLink>
         </motion.div>

@@ -6,9 +6,11 @@ const TextBox = ({ children, className, direction }) => {
       initial={{
         opacity: 0,
         scale: 0.5,
+        y: "100%",
         x: direction === "left" ? "-50%" : "50%",
       }}
-      whileInView={{ opacity: 1, x: 0, scale: 1 }}
+      whileInView={{ opacity: 1, y: 0, x: 0, scale: 1 }}
+      transition={{ type: "tween" }}
       className={` ${className}`}
     >
       <h3 className="text-3xl font-semibold text-[#1f3f5b] xl:text-2xl lg:text-xl xs:text-lg">
