@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 const PhonesDesc = () => {
   return (
     <motion.div
-      initial={{ opacity: 0, x: "-50%" }}
-      whileInView={{ opacity: 1, x: 0 }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
       viewport={{ amount: 0.5, once: true }}
-      className="flex-1 "
+      className="relative z-50 flex-1"
     >
       <h3 className="text-4xl font-semibold text-white xl:text-3xl lg:text-2xl sm:text-xl">
         State of the Art Infrastructure

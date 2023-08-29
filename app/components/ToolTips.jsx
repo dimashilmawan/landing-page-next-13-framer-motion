@@ -12,8 +12,8 @@ const ToolTips = ({ label, isTooltipsActive }) => {
     <AnimatePresence initial={false} mode="popLayout">
       {isTooltipsActive && (
         <motion.div
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           style={{ left: "50%", top: 60, translateX: "-50%" }}
           className=" absolute w-36 rounded-md bg-white font-normal text-gray-700/90 shadow-2xl"

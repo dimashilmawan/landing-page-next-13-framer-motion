@@ -7,8 +7,8 @@ const IntroContent = () => {
   return (
     <div className="flex h-full flex-col items-center justify-center">
       <motion.div
-        initial={{ y: -500, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         transition={{ delay: 0.2 }}
       >
         <h1 className="text-center text-7xl font-semibold text-white xl:text-6xl lg:text-5xl sm:text-4xl xs:text-3xl">
@@ -20,16 +20,16 @@ const IntroContent = () => {
       </motion.div>
       <div className="mt-8 flex items-center gap-4 sm:mt-10 xs:flex-col">
         <motion.div
-          initial={{ x: -250, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
         >
           <ButtonLink href={"/signup"}>Start for Free</ButtonLink>
         </motion.div>
         <motion.div
-          initial={{ x: 250, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ delay: 0.3 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4 }}
         >
           <ButtonLink outlined href={"#illustration-desk"}>
             Learn More
