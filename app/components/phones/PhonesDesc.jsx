@@ -1,6 +1,14 @@
+"use client";
+import { motion } from "framer-motion";
+
 const PhonesDesc = () => {
   return (
-    <div className="flex-1">
+    <motion.div
+      initial={{ x: "50%", opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      viewport={{ amount: 0.5 }}
+      className="flex-1"
+    >
       <h3 className="text-4xl font-semibold text-white xl:text-3xl lg:text-2xl sm:text-xl">
         State of the Art Infrastructure
       </h3>
@@ -10,7 +18,7 @@ const PhonesDesc = () => {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste voluptates
         error itaque ducimus labore voluptate!
       </p>
-    </div>
+    </motion.div>
   );
 };
 export default PhonesDesc;

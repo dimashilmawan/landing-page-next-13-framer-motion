@@ -38,7 +38,7 @@ const MobileNav = () => {
       <AnimatePresence>
         {isOpen && (
           <>
-            <Backdrop onCloseModal={closeModalHandler} />
+            {/* <Backdrop onCloseModal={closeModalHandler} /> */}
             <Modal
               onCloseModal={closeModalHandler}
               onToggleDropdown={toggleDropdownHandler}
@@ -56,10 +56,10 @@ const Backdrop = () => {
   return (
     <motion.div
       className="fixed left-0 top-0 z-[150] h-full w-full bg-[rgba(255,61,84,0.8)] backdrop-blur-sm "
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ delay: 0.2, duration: 0.2 }}
+      // initial={{ opacity: 0 }}
+      // animate={{ opacity: 1 }}
+      // exit={{ opacity: 0 }}
+      // transition={{ delay: 0.2, duration: 0.2 }}
     >
       &nbsp;
     </motion.div>

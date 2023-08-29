@@ -1,10 +1,8 @@
-"use client";
 import Container from "@/components/Container";
 import TextBox from "@/components/TextBox";
 import illustrationEditorDesk from "../../public/images/illustration-editor-desktop.svg";
 import illustrationEditorMobile from "../../public/images/illustration-editor-mobile.svg";
 import Image from "next/image";
-import { motion } from "framer-motion";
 
 const Editor = () => {
   return (
@@ -20,11 +18,7 @@ const Editor = () => {
               Robust content management
             </TextBox>
           </div>
-          <motion.div
-            initial={{ x: 200, scale: 0.3, opacity: 0 }}
-            whileInView={{ x: 0, scale: 1, opacity: 1 }}
-            className="flex flex-1 items-center justify-center  md:order-1"
-          >
+          <div className="flex flex-1 items-center justify-center md:order-1">
             <Image
               alt="illustration editor desktop"
               src={illustrationEditorDesk}
@@ -35,7 +29,7 @@ const Editor = () => {
               src={illustrationEditorMobile}
               className="hidden h-auto w-full md:block"
             />
-          </motion.div>
+          </div>
         </div>
       </Container>
     </div>
