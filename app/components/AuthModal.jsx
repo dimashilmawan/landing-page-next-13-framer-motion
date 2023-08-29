@@ -3,9 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { ContainerModal } from "./Container";
 import { motion } from "framer-motion";
-
-const illustrationPhones = "/images/illustration-phones-cropped.svg";
-const illustrationLaptopMobile = "/images/illustration-laptop-mobile.svg";
+import illustrationPhones from "../../public/images/illustration-phones-cropped.svg";
+import illustrationLaptopMobile from "../../public/images/illustration-laptop-mobile.svg";
 
 const AuthModal = ({ login }) => {
   return (
@@ -23,8 +22,6 @@ const AuthModal = ({ login }) => {
               }`}
             >
               <Image
-                width="100"
-                height="100"
                 alt="Image Auth"
                 src={login ? illustrationLaptopMobile : illustrationPhones}
               />

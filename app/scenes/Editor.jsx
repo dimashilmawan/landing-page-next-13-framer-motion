@@ -19,7 +19,7 @@ const Editor = () => {
             </TextBox>
           </div>
           <div className="flex flex-1 items-center justify-center md:order-1">
-            {/* <Image
+            <Image
               alt="illustration editor desktop"
               src={illustrationEditorDesk}
               className="h-auto w-[300px] translate-x-20 scale-[2.5] object-cover xl:translate-x-24 xl:scale-[2.3] lg:translate-x-28 lg:scale-[2] md:hidden"
@@ -28,7 +28,7 @@ const Editor = () => {
               alt="illustration editor mobile"
               src={illustrationEditorMobile}
               className="hidden h-auto w-full md:block"
-            /> */}
+            />
           </div>
         </div>
       </Container>

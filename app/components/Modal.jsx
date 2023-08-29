@@ -2,6 +2,9 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ButtonLinkMobile } from "@/components/ButtonLink";
+import Image from "next/image";
+import iconClose from "../../public/images/icon-close.svg";
+import iconArrow from "../../public/images/icon-arrow-dark.svg";
 
 const Modal = ({ onCloseModal, onToggleDropdown, dropdown }) => {
   return (
@@ -9,7 +12,6 @@ const Modal = ({ onCloseModal, onToggleDropdown, dropdown }) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      // style={{ translateY: "-50%" }}
       className={`fixed left-0 right-0 top-1/2 z-[200] mx-auto block w-[48rem] max-w-3xl  -translate-y-1/2  rounded-2xl bg-white/95 px-16 pb-12 pt-8 text-xl text-[rgba(31,63,91,0.8)] shadow-xl lg:w-[calc(100%_-_8rem)] md:w-[calc(100%_-_6rem)] md:px-12 sm:w-[calc(100%_-_4rem)] sm:px-8 sm:text-lg xs:w-[calc(100%_-_2rem)] xs:px-4 xs:pb-8 xs:pt-4 xs:text-base`}
     >
       <button
@@ -19,9 +21,9 @@ const Modal = ({ onCloseModal, onToggleDropdown, dropdown }) => {
           onToggleDropdown();
         }}
       >
-        <img
+        <Image
           alt="icon close"
-          src="/images/icon-close.svg"
+          src={iconClose}
           className="h-auto w-[24px] sm:w-[20px]"
         />
       </button>
@@ -58,9 +60,9 @@ const Labels = ({ dropdown, onToggleDropdown }) => {
               >
                 {label}
               </span>
-              <img
+              <Image
                 alt="icon arrow"
-                src="/images/icon-arrow-dark.svg"
+                src={iconArrow}
                 className={`${
                   dropdown === label ? "rotate-180 " : ""
                 } transition-all`}
