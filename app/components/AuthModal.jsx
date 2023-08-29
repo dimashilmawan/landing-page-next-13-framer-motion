@@ -1,8 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import Container, { ContainerModal } from "./Container";
-import Navbar from "./Navbar";
+import { ContainerModal } from "./Container";
 import { motion } from "framer-motion";
 
 const illustrationPhones = "/images/illustration-phones-cropped.svg";
@@ -23,7 +22,9 @@ const AuthModal = ({ login }) => {
                 !login ? "order-3" : " "
               }`}
             >
-              <img
+              <Image
+                width="100"
+                height="100"
                 alt="Image Auth"
                 src={login ? illustrationLaptopMobile : illustrationPhones}
               />

@@ -1,5 +1,8 @@
 import Container from "@/components/Container";
 import TextBox from "@/components/TextBox";
+import illustrationEditorDesk from "../../public/images/illustration-editor-desktop.svg";
+import illustrationEditorMobile from "../../public/images/illustration-editor-mobile.svg";
+import Image from "next/image";
 
 const Editor = () => {
   return (
@@ -16,14 +19,14 @@ const Editor = () => {
             </TextBox>
           </div>
           <div className="flex flex-1 items-center justify-center  md:order-1">
-            <img
+            <Image
               alt="illustration editor desktop"
-              src="/images/illustration-editor-desktop.svg"
+              src={illustrationEditorDesk}
               className="h-auto w-[300px] translate-x-20 scale-[2.5] object-cover xl:translate-x-24 xl:scale-[2.3] lg:translate-x-28 lg:scale-[2] md:hidden"
             />
-            <img
+            <Image
               alt="illustration editor mobile"
-              src="/images/illustration-editor-mobile.svg"
+              src={illustrationEditorMobile}
               className="hidden h-auto w-full md:block"
             />
           </div>

@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import logo from "@/images/logo.svg";
-import logoAuth from "@/images/logo-auth.svg";
 
 const Logo = () => {
   return (
