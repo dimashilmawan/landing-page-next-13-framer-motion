@@ -6,9 +6,9 @@ import Image from "next/image";
 
 const Editor = () => {
   return (
-    <div className="overflow-hidden " id="illustration-desk ">
+    <div className="" id="illustration-desk">
       <Container className="h-full pb-60 pt-32 xl:pb-56 xl:pt-28 lg:pb-44 lg:pt-20 md:py-28  md:pb-40 sm:pb-60 xs:py-20 xs:pb-40">
-        <h2 className="text-center text-[2.75rem] font-semibold text-[#1f3f5b] lg:text-3xl xs:text-2xl">
+        <h2 className="text-center font-overpass text-4xl font-semibold text-[#1f3f5b] lg:text-3xl xs:text-2xl">
           Design for the future
         </h2>
         <div className="mt-20 flex gap-8 xl:mt-14 md:flex-col xs:mt-8 ">
@@ -34,13 +34,11 @@ const Editor = () => {
             <Image
               alt="illustration editor desktop"
               src={illustrationEditorDesk}
-              quality={85}
               className="h-auto w-full translate-x-20 scale-125  xl:translate-x-24  lg:translate-x-28 md:hidden"
             />
             <Image
               alt="illustration editor mobile"
               src={illustrationEditorMobile}
-              quality={85}
               className="hidden h-auto w-full md:block"
             />
           </div>

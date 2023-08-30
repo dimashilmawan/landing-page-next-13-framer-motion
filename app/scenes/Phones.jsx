@@ -20,7 +20,6 @@ const Phones = () => {
             <Image
               alt="illustration phones"
               src={illustrationPhones}
-              quality={90}
               className="h-auto w-[150px] translate-y-5  scale-[3.5]  xl:scale-[3] lg:translate-y-4 lg:scale-[2.5] sm:w-[93px] sm:-translate-y-20 sm:scale-[4] xs:scale-[3.1]"
             />
             {/* <Image

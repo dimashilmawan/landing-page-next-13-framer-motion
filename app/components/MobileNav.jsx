@@ -53,9 +53,10 @@ const MobileNav = () => {
 };
 export default MobileNav;
 
-const Backdrop = () => {
+const Backdrop = ({ onCloseModal }) => {
   return (
     <motion.div
+      onClick={onCloseModal}
       className="fixed left-0 top-0 z-[150] h-full w-full bg-[rgba(255,61,84,0.8)] backdrop-blur-sm "
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}

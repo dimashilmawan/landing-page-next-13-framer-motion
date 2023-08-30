@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -21,8 +24,8 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        overpass: ["var(--font-overpass)"],
-        ubuntu: ["var(--font-ubuntu)"],
+        overpass: ["var(--font-overpass)", ...defaultTheme.fontFamily.sans],
+        ubuntu: ["var(--font-ubuntu)", ...defaultTheme.fontFamily.sans],
       },
     },
   },

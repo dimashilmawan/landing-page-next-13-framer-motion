@@ -8,43 +8,41 @@ import iconArrow from "../../public/images/icon-arrow-dark.svg";
 
 const Modal = ({ onCloseModal, onToggleDropdown, dropdown }) => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      style={{
-        borderRadius: 24,
-        left: 0,
-        right: 0,
-        top: "50%",
-        y: "-50%",
-      }}
-      className={`fixed z-[200] mx-auto block w-[48rem] max-w-3xl bg-white/95 px-16 pb-12 pt-8 text-xl text-[rgba(31,63,91,0.8)] will-change-transform lg:w-[calc(100%_-_8rem)] md:w-[calc(100%_-_6rem)] md:px-12 sm:w-[calc(100%_-_4rem)] sm:px-8 sm:text-lg xs:w-[calc(100%_-_2rem)] xs:px-4 xs:pb-8 xs:pt-4 xs:text-base`}
-    >
-      <button
-        className="absolute right-2 top-2 mx-auto flex h-10 w-10 items-center justify-center rounded-full sm:-bottom-20 sm:h-12 sm:w-12"
-        onClick={() => {
-          onCloseModal();
-          onToggleDropdown();
+    <div className="pointer-events-none fixed inset-0 z-[200] flex items-center justify-center">
+      <motion.div
+        initial={{ opacity: 0, y: "-100%" }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: "-100%" }}
+        style={{
+          borderRadius: 24,
         }}
+        className={`pointer-events-auto relative mx-auto block w-[48rem] max-w-3xl bg-white/95 px-16 pb-12 pt-8 text-xl text-[rgba(31,63,91,0.8)] lg:w-[calc(100%_-_8rem)] md:w-[calc(100%_-_6rem)] md:px-12 sm:w-[calc(100%_-_4rem)] sm:px-8 sm:text-lg xs:w-[calc(100%_-_2rem)] xs:px-4 xs:pb-8 xs:pt-4 xs:text-base`}
       >
-        <Image
-          alt="icon close"
-          src={iconClose}
-          priority
-          className="h-auto w-[24px] sm:w-[20px]"
-        />
-      </button>
-      <Labels dropdown={dropdown} onToggleDropdown={onToggleDropdown} />
-      <div className="flex flex-col items-center justify-center gap-4 pt-8">
-        <Link onClick={onCloseModal} href="/login">
-          Login
-        </Link>
-        <ButtonLinkMobile onClick={onCloseModal} href="/signup">
-          Sign up
-        </ButtonLinkMobile>
-      </div>
-    </motion.div>
+        <button
+          className="absolute right-2 top-2 mx-auto flex h-10 w-10 items-center justify-center rounded-full sm:-bottom-20 sm:h-12 sm:w-12"
+          onClick={() => {
+            onCloseModal();
+            onToggleDropdown();
+          }}
+        >
+          <Image
+            alt="icon close"
+            src={iconClose}
+            priority
+            className="h-auto w-[24px] sm:w-[20px]"
+          />
+        </button>
+        <Labels dropdown={dropdown} onToggleDropdown={onToggleDropdown} />
+        <div className="flex flex-col items-center justify-center gap-4 pt-8">
+          <Link onClick={onCloseModal} href="/login">
+            Login
+          </Link>
+          <ButtonLinkMobile onClick={onCloseModal} href="/signup">
+            Sign up
+          </ButtonLinkMobile>
+        </div>
+      </motion.div>
+    </div>
   );
 };
 export default Modal;
