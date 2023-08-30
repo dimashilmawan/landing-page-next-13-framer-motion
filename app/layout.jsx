@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
         className={` ${overpass.variable} ${ubuntu.variable} ${overpass.className}`}
       >
         <>
-          <Container className="absolute left-0 top-10 z-[100] ">
+          <Container className="absolute left-0 right-0 top-10 z-[100]">
             <Navbar />
           </Container>
           {children}

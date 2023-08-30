@@ -9,7 +9,7 @@ import iconArrow from "../../public/images/icon-arrow-dark.svg";
 const Modal = ({ onCloseModal, onToggleDropdown, dropdown }) => {
   return (
     <div className="pointer-events-none fixed inset-0 z-[200] flex items-center justify-center">
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0, y: "-100%" }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: "-100%" }}
@@ -17,6 +17,15 @@ const Modal = ({ onCloseModal, onToggleDropdown, dropdown }) => {
           borderRadius: 24,
         }}
         className={`pointer-events-auto relative mx-auto block w-[48rem] max-w-3xl bg-white/95 px-16 pb-12 pt-8 text-xl text-[rgba(31,63,91,0.8)] lg:w-[calc(100%_-_8rem)] md:w-[calc(100%_-_6rem)] md:px-12 sm:w-[calc(100%_-_4rem)] sm:px-8 sm:text-lg xs:w-[calc(100%_-_2rem)] xs:px-4 xs:pb-8 xs:pt-4 xs:text-base`}
+      > */}
+      <motion.div
+        initial={{ opacity: 0, scale: "80%" }}
+        animate={{ opacity: 1, scale: "100%" }}
+        exit={{ opacity: 0, scale: "80%" }}
+        style={{
+          borderRadius: 24,
+        }}
+        className={`pointer-events-auto relative mx-auto w-[90vw] max-w-3xl bg-white/95 px-16 pb-12 pt-8 text-xl text-[rgba(31,63,91,0.8)] md:px-12  sm:px-8 sm:text-lg xs:px-4 xs:pb-8 xs:pt-4 xs:text-base`}
       >
         <button
           className="absolute right-2 top-2 mx-auto flex h-10 w-10 items-center justify-center rounded-full sm:-bottom-20 sm:h-12 sm:w-12"
@@ -28,7 +37,6 @@ const Modal = ({ onCloseModal, onToggleDropdown, dropdown }) => {
           <Image
             alt="icon close"
             src={iconClose}
-            priority
             className="h-auto w-[24px] sm:w-[20px]"
           />
         </button>
@@ -62,14 +70,13 @@ const Labels = ({ dropdown, onToggleDropdown }) => {
               <span
                 className={`${
                   dropdown === label ? "text-[#1f3f5b] " : ""
-                } capitalize transition-all`}
+                } capitalize `}
               >
                 {label}
               </span>
               <Image
                 alt="icon arrow"
                 src={iconArrow}
-                priority
                 className={`-mb-1 h-auto w-[12px]  ${
                   dropdown === label ? "rotate-180 " : ""
                 } transition-all`}

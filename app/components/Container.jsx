@@ -1,8 +1,9 @@
 const Container = ({ children, className }) => {
   return (
-    <div
-      className={`container mx-auto max-w-[96rem] px-24 xl:px-20 lg:px-16 md:px-12 sm:px-8 xs:px-4 ${className} `}
-    >
+    // <div
+    //   className={`container mx-auto max-w-[96rem] px-24 xl:px-20 lg:px-16 md:px-12 sm:px-8 xs:px-4 ${className} `}
+    // >
+    <div className={`mx-auto w-[90vw] max-w-[96rem] ${className} `}>
       {children}
     </div>
   );
@@ -21,8 +22,11 @@ export default Container;
 // };
 export const ContainerModal = ({ children, className }) => {
   return (
+    // <div
+    //   className={`mx-auto w-[48rem] max-w-3xl px-16 lg:w-[calc(100%_-_8rem)] md:w-[calc(100%_-_6rem)] md:px-12 sm:w-[calc(100%_-_4rem)] sm:px-8 xs:w-[calc(100%_-_2rem)] xs:px-4 ${className}`}
+    // >
     <div
-      className={`mx-auto w-[48rem] max-w-3xl px-16 lg:w-[calc(100%_-_8rem)] md:w-[calc(100%_-_6rem)] md:px-12 sm:w-[calc(100%_-_4rem)] sm:px-8 xs:w-[calc(100%_-_2rem)] xs:px-4 ${className}`}
+      className={`mx-auto w-[90vw] max-w-3xl px-16 md:px-12 sm:px-8  xs:px-4 ${className}`}
     >
       {children}
     </div>
