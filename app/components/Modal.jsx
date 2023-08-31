@@ -19,9 +19,9 @@ const Modal = ({ onCloseModal, onToggleDropdown, dropdown }) => {
         className={`pointer-events-auto relative mx-auto block w-[48rem] max-w-3xl bg-white/95 px-16 pb-12 pt-8 text-xl text-[rgba(31,63,91,0.8)] lg:w-[calc(100%_-_8rem)] md:w-[calc(100%_-_6rem)] md:px-12 sm:w-[calc(100%_-_4rem)] sm:px-8 sm:text-lg xs:w-[calc(100%_-_2rem)] xs:px-4 xs:pb-8 xs:pt-4 xs:text-base`}
       > */}
       <motion.div
-        initial={{ opacity: 0, scale: "80%" }}
-        animate={{ opacity: 1, scale: "100%" }}
-        exit={{ opacity: 0, scale: "80%" }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
         style={{
           borderRadius: 24,
         }}
